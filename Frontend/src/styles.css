@@ -2,5 +2,5 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 .card {
-    margin: 8px;
+    margin-top: 8px;
 }

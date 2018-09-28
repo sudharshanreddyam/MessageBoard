@@ -8,8 +8,9 @@ export class WebService {
     constructor(private http: HttpClient) {
     }
 
-    getMessages(): Observable <any> {
-        return this.http.get(this.BASE_URL + '/messages');
+    getMessages(user): Observable <any> {
+        user =  user ? ('/' + user) : '';
+        return this.http.get(this.BASE_URL + '/messages' + user);
     }
 
     postMessage(message: any): Observable <any> {
